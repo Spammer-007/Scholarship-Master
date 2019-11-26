@@ -122,7 +122,7 @@
 
  
 
-	<form action="/Scholarship/studRegister.nsp" modelAttribute = "regnow" method="post"> <!-- onsubmit="return (validate() && checkPassword()) && phoneNumber()" -->
+	<form action="/Scholarship/studRegister.nsp" modelAttribute = "regnow" method="post" onsubmit="return (validate() && checkPassword()) && phoneNumber()">
 		<h2 align="center">Fresh Student Application Form</h2>
 		<div class="card-layout">
 			<table id="table1" ; cellspacing="5px" cellpadding="5%"

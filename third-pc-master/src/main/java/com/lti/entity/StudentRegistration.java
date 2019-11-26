@@ -36,8 +36,6 @@ public class StudentRegistration {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "registerseq")
 	private int studentId;
 
-	// PLz note down the student id for logging in to your scholarship acccount
-
 	public int getStudentId() {
 		return studentId;
 	}
@@ -112,30 +110,8 @@ public class StudentRegistration {
 
 	public void setInstituteCode(int instituteCode) {
 		
-		  /*InstituteRegistration inst = new InstituteRegistration(); 
-		  String query = "Select i.instituteCode from Institute_Registration as i where i.instituteCode=:inCode";
-		  
-		  Query q =EMDao.getEntityManager().createQuery(query); 
-		  q.setParameter("inCode", instituteCode); 
-		  System.out.println(q.getParameterValue("inCode"));
-		  //List<InstituteRegistration> obj = q.getResultList();
-		  //System.out.println(tquery.getResultList()); 
-		  if(q.getSingleResult() != null)
-		  { 
-			  long instCode =(long) q.getSingleResult(); 
-		  if(instCode == instituteCode)
-		  {
-*/
-				this.instituteCode=instituteCode;
-	/*	  }
-		   else
-		   {
-		  System.out.println("Invalid Institute Code. Please try again later"); 
-		  this.instituteCode=0;
-		  }
-		  }
-
-*/
+		this.instituteCode=instituteCode;
+	
 	}
 	
 	public long getStudentAadharNo() {

@@ -29,7 +29,6 @@ public class InstituteRegistration {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="instseq")
-	//@GeneratedValue
 	private int instituteCode;
 	
 	private String instCategory;

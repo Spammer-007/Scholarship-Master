@@ -2,6 +2,7 @@ package com.lti.controller;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,35 +43,16 @@ public class ScholarshipRegistrationController {
 	private StudentService studentService;
 
 	 private int i = 0;
-	    
-	/*
-	 * @RequestMapping("/BasicDetails") public ModelAndView BasicDetails() { return
-	 * new ModelAndView("ScholarshipBasic", new HashMap<>()); }
-	 * 
-	 */
-	 
-		/*@RequestMapping("/ScholarshipBasic")
-	    public ModelAndView StudDetailsForm(@RequestAttribute(studentId), ModelMap Model) {
-	        return new ModelAndView("Scholarship_basic", new HashMap<>());
-  
-		}*/
 		
 		@RequestMapping("/ScholarshipBasic")
 	    public ModelAndView StudDetailsForm(ModelMap model) {
-			//Map<String,Object>map=new HashMap<>();
 		
 			return new ModelAndView("Scholarship_basic",model);
-	        //return new ModelAndView("Scholarship_basic", new HashMap<>());
-  
 		}
 		
 	 @RequestMapping(path = "ScholarshipBasic.nsp", method = RequestMethod.POST)
 		public String addAcademic(ScholarshipBasic studBasic, ModelMap model,HttpServletRequest request)
 		{
-		/*
-		 * StudentRegistration s=(StudentRegistration) model.get("student");
-		 * studBasic.setStudentRegistration(s);
-		 */
 			        
 			ScholarshipService.addScholarshipBasic(studBasic);
 			
@@ -78,7 +60,6 @@ public class ScholarshipRegistrationController {
 			int studid = (int) session.getAttribute("studentId");
 			System.out.println("Student id= "+studid);
 			
-			//StudentService studentService=new StudentService();
 			int scheme_Id;
 			scheme_Id=studentService.pullSchemeId(studid);
 			System.out.println("Scheme id= "+scheme_Id);
@@ -88,14 +69,16 @@ public class ScholarshipRegistrationController {
 		}
 	 
 	 
-	 @RequestMapping("/viewDetailsStudent")
-	    public ModelAndView ViewDetailsStudent(ModelMap model) {
-			//Map<String,Object>map=new HashMap<>();
-		
-			return new ModelAndView("Scholarship_basic",model);
-	        //return new ModelAndView("Scholarship_basic", new HashMap<>());
-
-		}
+	/*																					//Under fetching DATA
+	 * @RequestMapping("/viewDetailsStudent") public ModelAndView
+	 * ViewDetailsStudent(StudentRegistration studentRegistration,ModelMap model) {
+	 * 
+	 * List
+	 * obj=studentService.readStudentDetails(studentRegistration.getStudentId());
+	 * model.put("studentId", obj); return new ModelAndView("userdetails",model);
+	 * 
+	 * }
+	 */
 		
 		@RequestMapping(path = "AcademicDetails.nsp", method = RequestMethod.POST)
 		public String addAcademic(AcademicDetails AcademicDetails, ModelMap model, HttpServletRequest request)
@@ -104,7 +87,6 @@ public class ScholarshipRegistrationController {
 			AcademicDetails.setStudentRegistration(s);
 			        
 			ScholarshipService.addAcademic(AcademicDetails);
-			
 			return "StudentMarks_10";
 		}
 		
@@ -113,6 +95,7 @@ public class ScholarshipRegistrationController {
 		{   
 			StudentRegistration s=(StudentRegistration) model.get("student");
 			StudentMarks10.setStudentRegistration(s);
+			
 			ScholarshipService.addMarks10(StudentMarks10);
 			return "StudentMarks_12";
 		}
@@ -122,6 +105,7 @@ public class ScholarshipRegistrationController {
 		{   
 			StudentRegistration s=(StudentRegistration) model.get("student");
 			StudentMarks12.setStudentRegistration(s);
+			
 			ScholarshipService.addMarks12(StudentMarks12);
 			return "DocumentsUpload";
 		}
@@ -131,29 +115,12 @@ public class ScholarshipRegistrationController {
 		{        
 			StudentRegistration s=(StudentRegistration) model.get("student");
 			DocumentsUpload.setStudentRegistration(s);
+			
 			ScholarshipService.addDocuments(DocumentsUpload);
-			return "StudentDashboard"; // It should go to Apply for schemes page. for now it is Home
+			return "StudentDashboard"; 												// It should go to Apply for schemes page
 		}
 	    
-//	    @RequestMapping("/Details10")
-//	    public ModelAndView Details10() {
-//	        return new ModelAndView("StudentsMarks_10", new HashMap<>());  
-//		}
-//		
-//	    @RequestMapping("/Details12")
-//	    public ModelAndView Details12() {
-//	        return new ModelAndView("StudentsMarks_12", new HashMap<>());  
-//		}
-//	    
-//	    @RequestMapping("/AcademicDetails")
-//	    public ModelAndView AcademicDetails() {
-//	        return new ModelAndView("AcademicDetails", new HashMap<>());  
-//		}
-//	    
-//	    @RequestMapping("/DocumentsUpload")
-//	    public ModelAndView DocumentsUpload() {
-//	        return new ModelAndView("DocumentsUpload", new HashMap<>());
-//		}
+		
 	}
 
 

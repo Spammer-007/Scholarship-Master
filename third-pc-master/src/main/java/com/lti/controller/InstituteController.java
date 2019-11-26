@@ -76,7 +76,7 @@ public class InstituteController {
     public ModelAndView studentLogout(HttpServletRequest request) {
 		session=request.getSession(false);
 		session.invalidate();
-        return new ModelAndView("index", new HashMap<>());
+        return new ModelAndView("Homepage", new HashMap<>());
 
 	}
 }

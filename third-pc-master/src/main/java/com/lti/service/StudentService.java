@@ -45,7 +45,7 @@ public class StudentService {
 			return false;
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")								//used in student lOgin
 	public List fetchByStudentId(int studentId){
 			List list=genericDao.fetchByStudentId(studentId);
 			return list;
@@ -58,5 +58,18 @@ public class StudentService {
 	public void addSchemeId(int studentId,int scheme_Id) {
 		studentDao.addSchemeId(studentId, scheme_Id);
 	}
+
+	public StudentRegistration findUserById(int id) {
+		StudentRegistration user= studentDao.findUserById(id);
+	       return user;
+	    }
+	
+	/*public List readStudentDetails(int studentId) {								under Fetching
+		return studentDao.readStudentDetails(studentId);
+	}
+	public List findUsers() {
+		List users= studentDao.findUsers();
+	       return users;
+	}*/
 
 }

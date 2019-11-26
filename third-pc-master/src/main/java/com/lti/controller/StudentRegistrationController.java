@@ -36,10 +36,9 @@ import javax.servlet.http.HttpSession;
 			
 			@RequestMapping(path="/Scholarship/studRegister.nsp")
 			public ModelAndView addStudent(@ModelAttribute("regnow") StudentRegistration student ){
-				System.out.println("ashda");
+		
 				studService.addStudent(student);
-				//Map<String,Object>map=new HashMap<>();
-				//map.put("Id",student.getStudentId());
+				
 				ModelAndView mv=new ModelAndView("confirmpage","Id",student.getStudentId());
 				return mv;
 			}
@@ -54,7 +53,7 @@ import javax.servlet.http.HttpSession;
 			
 			@RequestMapping("/log-in.nsp")
 		    public ModelAndView logintoform() {
-		        return new ModelAndView("index", new HashMap<>()); //replace # with Login page name
+		        return new ModelAndView("index", new HashMap<>()); 
 	  
 			}
 			
@@ -66,20 +65,17 @@ import javax.servlet.http.HttpSession;
 	  
 			}
 			
+			@RequestMapping("/userdetails")
+		    public ModelAndView viewDetails() {
+		        return new ModelAndView("userdetails", new HashMap<>());
+	  
+			}
 			@SuppressWarnings("unchecked")
 			@RequestMapping(path="/studentlogin")
 			public ModelAndView instituteLogin(@RequestParam("studentId") String studentId, @RequestParam("studentPassword") String studentPassword, HttpServletRequest request ){
 				List<StudentRegistration> list;
 				boolean i=studService.checkLogin(Integer.parseInt(studentId), studentPassword);
-				/*Map<String,Object>map=new HashMap<>();
-				if(i) {
-					map.put("Id",studentId);
-				}
-				ModelAndView mv=new ModelAndView("StudentDashboard",map);*/
-				/*User u=new User();
-				this.studentId=Integer.parseInt(studentId);
-				u.studentId=this.studentId;
-				System.out.println(u.studentId+" slogin");*/
+				
 				ModelAndView mv=new ModelAndView("StudentDashboard");
 				ModelAndView mv2=new ModelAndView("#");
 
@@ -88,8 +84,6 @@ import javax.servlet.http.HttpSession;
 					list=studService.fetchByStudentId(Integer.parseInt(studentId));
 					session.setAttribute("studentId", list.get(0).getStudentId());
 					System.out.println("Student id " +studentId+ " just logged in");
-					//User u=new User();
-					//u.studentId=Integer.parseInt(studentId);
 					return mv;
 				}
 				else{
@@ -103,11 +97,9 @@ import javax.servlet.http.HttpSession;
 		    public ModelAndView studentLogout(HttpServletRequest request) {
 				session=request.getSession(false);
 				session.invalidate();
-		        return new ModelAndView("index", new HashMap<>());
+		        return new ModelAndView("Homepage", new HashMap<>());
 	  
 			}
-			
-			
 			
 		}
 		

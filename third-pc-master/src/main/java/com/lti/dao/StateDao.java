@@ -20,7 +20,6 @@ public class StateDao {
 	
 	@Transactional
 	public int readLogin(String AdminId, String Password){
-		//System.out.println("Here");
 		String query = "Select s from AdminMaster as s where s.AdminId=:AdminId and s.Password=:Password";
 		TypedQuery<AdminMaster> q1 = entityManager.createQuery(query, AdminMaster.class);
 		q1.setParameter("AdminId", AdminId);

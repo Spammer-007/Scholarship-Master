@@ -20,9 +20,6 @@ public class ScholarshipBasic {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "scholarseq")
 	private int stuFamId;
 	
-	//Get Aadhar card details from Student_Registration table
-	//Choose Scheme needs to be chosen from Schemes_Master table 
-	
 	private String studentFatherName;
 	
 	private String studentMotherName;

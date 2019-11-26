@@ -48,7 +48,6 @@ public class InstituteDao{
 	
 	@Transactional
 	public int readLogin(int instituteCode, String password){
-		//System.out.println("Here");
 		String query = "Select s from InstituteRegistration as s where s.instituteCode=:instituteCode and s.password=:password";
 		TypedQuery<InstituteRegistration> q1 = entityManager.createQuery(query, InstituteRegistration.class);
 		q1.setParameter("instituteCode", instituteCode);

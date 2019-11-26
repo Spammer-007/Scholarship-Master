@@ -27,14 +27,6 @@ public class ScholarshipStudentStatus {
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
-	/*
-	 * @OneToOne
-	 * 
-	 * @JoinColumn(name="studentId") private StudentRegistration
-	 * studentRegistration;
-	 */
-	
-	//private long instituteCode;
 
 	public int getSchStudStatusId() {
 		return schStudStatusId;
@@ -52,23 +44,5 @@ public class ScholarshipStudentStatus {
 		this.status = status;
 	}
 
-	/*
-	 * public StudentRegistration getStudentRegistration() { return
-	 * studentRegistration; }
-	 * 
-	 * public void setStudentRegistration(StudentRegistration studentRegistration) {
-	 * this.studentRegistration = studentRegistration; }
-	 */
-
-	/*
-	 * public long getInstituteCode() { return instituteCode; }
-	 * 
-	 * public void setInstituteCode(long instituteCode) { this.instituteCode =
-	 * instituteCode; }
-	 */
-
 	
-	
-	
-
 }

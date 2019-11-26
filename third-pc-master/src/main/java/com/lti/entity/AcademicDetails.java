@@ -22,7 +22,7 @@ public class AcademicDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "academicseq")
 	private int academicDetailsId;
-	//WE have to access institute name from Institute_Registration Table in the dropdown list for Institutes
+	
 	private String instituteName;
 	
 	private String presentClass;

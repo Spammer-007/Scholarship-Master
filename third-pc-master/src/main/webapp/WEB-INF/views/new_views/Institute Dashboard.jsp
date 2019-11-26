@@ -79,7 +79,7 @@ View Student Application Form
 </form>
 </div>
 
-<div id="ApplicationForms" class="ApplicationForms">
+<%-- <div id="ApplicationForms" class="ApplicationForms">
 	All Application Forms can be seen here
 </div>
 
@@ -98,7 +98,7 @@ View Student Application Form
 	<button>Accept</button>
 	<button>Reject</button>	
 	</center>
-</div>
+</div> --%>
 
 </body>
 </html>

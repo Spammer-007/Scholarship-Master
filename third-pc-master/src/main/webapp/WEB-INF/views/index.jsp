@@ -12,12 +12,6 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
-<!--  <style>
-body{
-background-image: url("images/backgroud.jpg");
-}
-</style> 
- -->
 </head>
 
 <body>
@@ -40,7 +34,8 @@ background-image: url("images/backgroud.jpg");
   </div> 
 </div>
 
-<div class="right" align="center"><form class="login100-form validate-form" modelAttribute = "loginnow" method="post" action="/studentlogin">
+<div class="right" align="center">
+<form class="login100-form validate-form" modelAttribute = "loginnow" method="post" action="/studentlogin">
 					<span class="login100-form-title">
 						<b><h1 align="center">Student Login</h1></b>
 					</span>
@@ -84,16 +79,6 @@ background-image: url("images/backgroud.jpg");
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
-					
-					
-					
-					<!-- <div class="text-center p-t-136">
-						<a class="txt2" href="#">
-							Ministry
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form> -->
 				
 				</div>
 				<div class="left"><form class="latest100-form validate-form">
