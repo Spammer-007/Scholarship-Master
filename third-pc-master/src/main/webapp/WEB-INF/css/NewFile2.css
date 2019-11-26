@@ -1,0 +1,237 @@
+/* {
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+}
+
+ body{
+	font-size:20px;
+	overflow-x:hidden;
+	color:white;
+	font-family: 'Flamenco', cursive;
+}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('images/farmer.jpg');
+	height:100vh;
+	background-size: cover;
+	background-repeat:no;
+	background-position:center;
+	height:100vh;
+}
+.clearfix:after {
+	content:".";
+	visibility:hidden;
+	display:block;
+	height:0px;
+	clear:both;
+}
+.row{
+	border-style: solid;
+	max-width:1180px;
+	margin: 0 auto;
+}
+.logo
+{
+	height:120px;
+	width:auto;
+	float:left;
+	margin-top:20px;
+}
+.main-nav{
+	float:center;
+
+}
+
+.main-nav li{
+	display: inline-block;
+	list-style:none;
+	margin-left:40px;
+}
+
+
+.main-nav li a{
+	padding: 5px 0px;
+	color: #fff;
+	text-decoration: none;
+	text-transform:uppercase;
+	font-size:110%;
+	font-weight:100;
+}
+.main-nav li a:hover{
+	border-bottom: 2px solid #bf55ec;
+}
+.main-content-header{
+	width:500px;
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%, -50%)
+	
+}
+.right{
+	
+	float: right;
+	padding:100px;
+	transform:translate(-750%,-750%);
+}
+.left{
+	float: left;
+	padding:100px;
+}
+h1{
+  box-sizing: border-box;
+ width: 300px;
+  height: 300px;
+	border: 2px solid;
+	color:#fff;
+	font-size:150%;
+	word-spacing:5px;
+	letter-spacing:1px;
+	margin-bottom: 20px;
+	text-transform:uppercase;
+	font-weight:lighter;
+}
+h2{
+	font-size:140%;
+	font-family: 'Flamenco', cursive;
+}
+.btn{
+	display:inlne-block;
+	padding: 10px 30px;
+	font-weight:lighter;
+	text-decoration:none;
+	text-transform: uppercase;
+	border-radius:200px;
+	transition: background-color 0.2s, border 0.2s, color 0.2;
+}
+
+.btn-full{
+	background-color:transparent;
+	color:#bf55ec;
+	magin-right:15px;
+	border:1px solid #bf55ec
+}
+.btn-full:hover{
+	background-color:#fff;
+}
+.btn-nav{
+	background-color:transparent;
+	color:white;
+	border:1px solid #fff;
+	
+}
+.btn-nav:hover{
+	background-color:#bf55ec;
+}
+.color-change{
+	
+}
+@keyframes colorchangekisan{
+	0%{color: red;}
+	25%{color: #bf55ec;}
+	50%{color:white;}
+	100{color: #bf55ec;}
+}
+.mobile-icon{display: none;}
+/*///responsivequeries//*/
+/* @media only screen and (max-width:1180px){
+	.main-content-header{
+	width:100%;
+	padding:2% 5%;}
+}
+@media only screen and (max-width:998px){
+	h1{font-size:200%;}
+	
+}
+@media only screen and (max-width:768px){
+	h1{font-size:180%;}
+.main-nav{display:none;}
+.mobile-icon{
+	display:inline-block;
+	color:white;
+	
+}
+
+}
+ .login100-form validate-form{
+	 box-sizing: border-box;
+ width: 300px;
+  height: 300px;
+	border: 2px solid;
+} */
+/* Dropdown Button */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+/* .dropdown-content a:hover {background-color: #ddd;} 
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
